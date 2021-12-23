@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+for jar in $(ls $SPARK_HOME/jars); do
+   hdfs dfs -put $SPARK_HOME/jars/$jar /user/$USER/lib/$jar
+   echo "Uploaded $jar"
+done
